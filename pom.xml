@@ -28,7 +28,17 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- JaCoCo Plugin -->
+              <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>    
+                     <!-- JaCoCo Plugin -->
+                     
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
