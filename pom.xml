@@ -5,11 +5,25 @@
     <artifactId>microservices-project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>service1</module>
         <module>service2</module>
         
     </modules>
+
+    <!-- Spring Boot Dependency Management -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>3.1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
@@ -38,4 +52,8 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
 </project>
