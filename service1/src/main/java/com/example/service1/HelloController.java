@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
     @GetMapping("/service1/hello")
-    public String sayHello() {
-        return "Hello from Service 1!";
+    public int add(int a, int b) {
+        return a + b;
     }
 }
