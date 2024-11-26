@@ -17,23 +17,23 @@ public class HelloControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    // @Test
-    // public void testSayHello() throws Exception {
-    //     mockMvc.perform(get("/service1/hello"))
-    //             .andExpect(status().isOk())
-    //             .andExpect(content().string("Hello from Service 1!"));
-    // }
+    @Test
+     void testSayHello() throws Exception {
+        mockMvc.perform(get("/service1/hello"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hello from Service 1!"));
+    }
 
     @Test
     void contextLoads() {
         
     }
-    @Test
-    void testAddEndpoint() throws Exception {
-        mockMvc.perform(get("/service1/hello?a=2&b=3"))
-                .andExpect(status().isOk()) 
-                .andExpect(content().string("5")); 
-    }
+    // @Test
+    // void testAddEndpoint() throws Exception {
+    //     mockMvc.perform(get("/service1/hello?a=2&b=3"))
+    //             .andExpect(status().isOk()) 
+    //             .andExpect(content().string("5")); 
+    // }
 }
 
 
