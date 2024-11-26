@@ -3,7 +3,7 @@ package com.example.service1;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloController {
     @GetMapping("/service1/hello")
     public String sayHello() {
