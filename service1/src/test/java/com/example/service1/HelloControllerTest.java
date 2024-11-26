@@ -29,12 +29,18 @@ public class HelloControllerTest {
         
     }
 
-    HelloController helloController = new HelloController();
+    @Test
+    void testAdd() {
+        // Arrange
+        HelloController helloController = new HelloController();
 
+        // Act
         int result = helloController.add(2, 3);
 
         // Assert
         assertEquals(5, result, "Adding 2 and 3 should return 5");
+    }
+
     // @Test
     // void testAddEndpoint() throws Exception {
     //     mockMvc.perform(get("/service1/hello?a=2&b=3"))
