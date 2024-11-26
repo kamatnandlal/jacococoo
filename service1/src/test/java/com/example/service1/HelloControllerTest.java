@@ -30,7 +30,7 @@ public class HelloControllerTest {
     }
 
     @Test
-    void testAdd() {
+    public void testAdd() {
         // Arrange
         HelloController helloController = new HelloController();
 
