@@ -28,6 +28,11 @@ public class HelloControllerTest {
     void contextLoads() {
         
     }
+    @Test
+    void testAddition() {
+        int result = HelloController.add(2, 3);
+        assertEquals(5, result, "Addition should return the sum of two numbers");
+    }
 }
 
 
