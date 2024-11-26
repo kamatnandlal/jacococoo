@@ -18,14 +18,14 @@ public class HelloControllerTest {
     private MockMvc mockMvc;
 
     @Test
-     void testSayHello() throws Exception {
+     public void testSayHello() throws Exception {
         mockMvc.perform(get("/service1/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello from Service 1!"));
     }
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
         
     }
     // @Test
