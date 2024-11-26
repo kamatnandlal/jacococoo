@@ -29,7 +29,7 @@ public class HelloControllerTest {
         
     }
     @Test
-    void testAddEndpoint() throws Exceptio {
+    void testAddEndpoint() throws Exception {
         mockMvc.perform(get("/service1/hello?a=2&b=3"))
                 .andExpect(status().isOk()) 
                 .andExpect(content().string("5")); 
