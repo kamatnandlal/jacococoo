@@ -29,9 +29,10 @@ public class HelloControllerTest {
         
     }
     @Test
-    void testAddition() {
-        int result = HelloController.add(2, 3);
-        assertEquals(5, result, "Addition should return the sum of two numbers");
+    void testAddEndpoint() throws Exceptio {
+        mockMvc.perform(get("/service1/hello?a=2&b=3"))
+                .andExpect(status().isOk()) 
+                .andExpect(content().string("5")); 
     }
 }
 
