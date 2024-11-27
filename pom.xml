@@ -54,7 +54,14 @@
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>${jacoco.plugin.version}</version>
-                     
+                     <configuration>
+                <!-- Include all modules -->
+                <dataFile>${project.build.directory}/jacoco.exec</dataFile>
+                <outputDirectory>${project.build.directory}/site/jacoco-aggregate</outputDirectory>
+                <includes>
+                    <include>com.example.*</include>
+                </includes>
+            </configuration>
                     <executions>
                         <execution>
                             <id>prepare-agent</id>
@@ -69,6 +76,13 @@
                                 <goal>report</goal>
                             </goals>
                         </execution>
+                        <execution>
+            <id>report-aggregate</id>
+            <phase>verify</phase>
+            <goals>
+                <goal>report-aggregate</goal>
+            </goals>
+        </execution>     
                         <execution>
                             <id>check</id>
                             <goals>
