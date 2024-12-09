@@ -57,7 +57,7 @@
                      <configuration>
                 <!-- Include all modules -->
                 <dataFile>${project.build.directory}/jacoco.exec</dataFile>
-                <outputDirectory>${project.build.directory}/site/jacoco-aggregate</outputDirectory>
+                <outputDirectory>${project.build.directory}/jacoco</outputDirectory>
                 <includes>
                     <include>com.example.*</include>
                 </includes>
